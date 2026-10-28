@@ -1,0 +1,3 @@
+# Edge Function-এ JWT ছাড়া POST আসবে (ডেস্কটপ অ্যাপের কাছে কোনো সিক্রেট কী থাকবে না)
+[functions.track]
+verify_jwt = false
