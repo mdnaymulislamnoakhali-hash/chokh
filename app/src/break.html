@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chokh Break</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="break.css">
+</head>
+<body>
+  <main class="scrim">
+    <section class="card" id="card" role="dialog" aria-modal="true" aria-labelledby="title">
+      <div class="emoji" aria-hidden="true">👀</div>
+      <h1 id="title">চোখকে ভালোবাসুন</h1>
+
+      <!-- ১) প্রশ্ন: রেস্ট নেবেন, নাকি Skip -->
+      <div id="view-ask">
+        <p class="msg" id="msg"></p>
+        <div class="actions">
+          <button type="button" class="primary" id="btn-rest">✅ রেস্ট নিলাম (20s)</button>
+          <button type="button" class="ghost" id="btn-skip">⏭️ Skip</button>
+        </div>
+      </div>
+
+      <!-- ২) ২০ সেকেন্ডের কাউন্টডাউন -->
+      <div id="view-count" hidden>
+        <div class="ring" role="timer" aria-live="off">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="track" cx="60" cy="60" r="54"></circle>
+            <circle class="bar" id="ring-bar" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <span class="num" id="count-num">২০</span>
+        </div>
+        <p class="msg">২০ ফিট দূরের কিছুর দিকে তাকিয়ে থাকুন, আর মাঝে মাঝে পলক ফেলুন।</p>
+        <button type="button" class="stop" id="btn-stop">আগেই শেষ করুন</button>
+      </div>
+
+      <!-- ৩) ধন্যবাদ -->
+      <div id="view-done" hidden>
+        <p class="msg done">চোখ বিশ্রাম পেল। এবার কাজে ফিরুন 🌿</p>
+      </div>
+
+      <!-- 🔜 ধাপ ৩: নাঈম নান্দনিকের ক্রেডিট (দিনে সর্বোচ্চ ২ বার) এখানে বসবে -->
+      <div id="credit" hidden></div>
+    </section>
+  </main>
+  <script src="common.js"></script>
+  <script src="break.js"></script>
+</body>
+</html>

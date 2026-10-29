@@ -1,0 +1,35 @@
+body { background: var(--paper); }
+.wrap { padding: 28px 28px 20px; display: flex; flex-direction: column; gap: 26px; min-height: 100%; }
+
+header h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+.sub { color: var(--ink-soft); font-size: 14px; margin-top: 2px; }
+
+.timer {
+  background: var(--card);
+  border: 1px solid var(--sage);
+  border-radius: 20px;
+  padding: 22px 20px;
+  text-align: center;
+}
+.timer .label { color: var(--ink-soft); font-size: 14px; }
+.timer .time { font-size: 56px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; color: var(--ink); }
+.timer .paused { margin-top: 6px; color: var(--leaf-dark); font-size: 14px; font-weight: 600; }
+
+h2 { font-size: 15px; font-weight: 600; margin-bottom: 10px; }
+.hint { color: var(--ink-soft); font-size: 12px; margin-top: 6px; text-align: right; }
+
+.seg { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--sage); border-radius: 12px; overflow: hidden; background: #fff; }
+.seg button { border: 0; background: transparent; padding: 10px 0; font-size: 16px; font-weight: 600; color: var(--ink-soft); border-right: 1px solid var(--sage); }
+.seg button:last-child { border-right: 0; }
+.seg button:hover { background: var(--card); }
+.seg button[aria-pressed="true"] { background: var(--leaf); color: #fff; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.btn { border: 1px solid var(--sage); background: #fff; border-radius: 12px; padding: 10px 12px; font-size: 14px; font-weight: 600; }
+.btn:hover { background: var(--card); }
+.btn.solid { width: 100%; margin-top: 10px; background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.btn.solid:hover { background: var(--leaf-dark); }
+.btn.link { border: 0; background: transparent; color: var(--leaf-dark); text-decoration: underline; text-underline-offset: 3px; padding: 4px 0; font-weight: 500; }
+.btn.link:hover { background: transparent; color: var(--ink); }
+
+footer { margin-top: auto; color: var(--ink-soft); font-size: 12px; line-height: 1.7; }

@@ -1,0 +1,23 @@
+[package]
+name = "chokh"
+version = "0.1.0"
+description = "Chokh - চোখ: 20-20-20 eye-care reminder"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# "tray-icon" = সিস্টেম ট্রে সাপোর্ট
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-single-instance = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# .exe ছোট রাখার জন্য রিলিজ সেটিংস
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

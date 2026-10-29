@@ -1,0 +1,28 @@
+/* Chokh - চোখ | শেয়ার্ড ডিজাইন টোকেন ও ফন্ট */
+@font-face {
+  font-family: "Noto Sans Bengali";
+  /* src/fonts/NotoSansBengali.ttf ফাইলটি না থাকলে ব্রাউজার চুপচাপ পরের ফন্টে (Nirmala UI) চলে যায় */
+  src: url("fonts/NotoSansBengali.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --card: #E8F5E9;        /* প্রম্পটে নির্দিষ্ট করা কার্ডের রঙ */
+  --ink: #1B3D2A;         /* গাঢ় বন জাতীয় সবুজ: শিরোনাম */
+  --ink-soft: #3E5E49;    /* বডি লেখা */
+  --leaf: #2E7D32;        /* প্রধান বাটন */
+  --leaf-dark: #1F5E24;
+  --sage: #B7D6BC;        /* বর্ডার, ট্র্যাক */
+  --paper: #F6FBF6;       /* মূল জানালার ব্যাকগ্রাউন্ড */
+  --focus: #0B6BCB;
+  --font: "Noto Sans Bengali", "Nirmala UI", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; }
+body { font-family: var(--font); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, select:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+[hidden] { display: none !important; }

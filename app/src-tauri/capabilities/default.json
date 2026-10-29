@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Chokh windows: status window + break overlay",
+  "windows": ["main", "break"],
+  "permissions": ["core:default"]
+}

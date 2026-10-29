@@ -5,3 +5,6 @@
    .env.*
    !.env.example
    *.pem
+# Rust build output
+/app/src-tauri/target/
+/app/node_modules/

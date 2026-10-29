@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chokh - চোখ</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>চোখ</h1>
+      <p class="sub">২০ মিনিট কাজ, ২০ ফিট দূরে, ২০ সেকেন্ড বিশ্রাম</p>
+    </header>
+
+    <section class="timer" aria-live="off">
+      <p class="label" id="timer-label">পরের ব্রেক</p>
+      <p class="time" id="timer-time">--:--</p>
+      <p class="paused" id="paused-note" hidden></p>
+    </section>
+
+    <section>
+      <h2>কতক্ষণ পরপর রিমাইন্ড করব?</h2>
+      <div class="seg" id="interval-seg" role="group" aria-label="ব্রেকের ব্যবধান (মিনিট)">
+        <button type="button" data-min="15">১৫</button>
+        <button type="button" data-min="20">২০</button>
+        <button type="button" data-min="30">৩০</button>
+        <button type="button" data-min="45">৪৫</button>
+        <button type="button" data-min="60">৬০</button>
+      </div>
+      <p class="hint">মিনিট</p>
+    </section>
+
+    <section>
+      <h2>এখন বিরক্ত করবেন না</h2>
+      <div class="row">
+        <button type="button" class="btn" id="pause-1">১ ঘণ্টা বিরতি</button>
+        <button type="button" class="btn" id="pause-2">২ ঘণ্টা বিরতি</button>
+      </div>
+      <button type="button" class="btn solid" id="resume" hidden>রিমাইন্ডার চালু করুন</button>
+    </section>
+
+    <section>
+      <button type="button" class="btn link" id="test-break">ব্রেক স্ক্রিন কেমন দেখায়, দেখে নিন</button>
+    </section>
+
+    <footer>
+      <p>✕ চাপলে অ্যাপ বন্ধ হয় না, ট্রে-তে চুপচাপ চলতে থাকে।<br>পুরোপুরি বন্ধ করতে ট্রে আইকনে ডান ক্লিক → বন্ধ করুন।</p>
+    </footer>
+  </main>
+  <script src="common.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
