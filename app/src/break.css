@@ -58,5 +58,18 @@ h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.
 }
 .stop:hover { color: var(--ink); }
 
-/* ক্রেডিট: অতি ছোট, হালকা ধূসর, বিরক্তিহীন (ধাপ ৩-এ ব্যবহার হবে) */
-#credit { margin-top: 24px; font-size: 12px; line-height: 1.7; color: #8a948c; }
+/* কোণার ছোট স্ট্যাটস */
+.stats {
+  position: fixed; top: 18px; right: 22px;
+  font-size: 13px; color: rgba(255, 255, 255, 0.78);
+  background: rgba(0, 0, 0, 0.25); padding: 5px 12px; border-radius: 999px;
+}
+
+/* ক্রেডিট: অতি ছোট, হালকা ধূসর, বিরক্তিহীন; ইউজার সহজে উপেক্ষা করতে পারবে */
+#credit { margin-top: 26px; padding-top: 14px; border-top: 1px solid rgba(46, 125, 50, 0.14); font-size: 12px; line-height: 1.7; color: #8a948c; }
+#credit p { white-space: pre-line; }
+#btn-follow {
+  margin-top: 8px; border: 0; background: transparent; color: #7d8a80;
+  font-size: 12px; text-decoration: underline; text-underline-offset: 3px; padding: 4px 8px;
+}
+#btn-follow:hover { color: var(--ink-soft); }

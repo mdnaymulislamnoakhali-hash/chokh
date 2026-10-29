@@ -8,11 +8,14 @@ edition = "2021"
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-# "tray-icon" = সিস্টেম ট্রে সাপোর্ট
-tauri = { version = "2", features = ["tray-icon"] }
-tauri-plugin-single-instance = "2"
+tauri = { version = "2", features = ["tray-icon"] }          # সিস্টেম ট্রে
+tauri-plugin-single-instance = "2"                            # একসাথে দুটো কপি চলা ঠেকায়
+tauri-plugin-autostart = "2"                                  # Windows চালু হলে অটো-স্টার্ট
+tauri-plugin-notification = "2"                               # পানি/পশ্চার রিমাইন্ডারের নোটিফিকেশন
+tauri-plugin-opener = "2"                                     # ফেসবুক পেজ ব্রাউজারে খোলা
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }  # স্থানীয় সময় (তারিখ/ঘণ্টা)
 
 # .exe ছোট রাখার জন্য রিলিজ সেটিংস
 [profile.release]

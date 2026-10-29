@@ -9,16 +9,19 @@
 </head>
 <body>
   <main class="scrim">
+    <!-- কোণায় ছোট করে আজকের হিসাব -->
+    <p class="stats" id="stats" aria-live="off"></p>
+
     <section class="card" id="card" role="dialog" aria-modal="true" aria-labelledby="title">
       <div class="emoji" aria-hidden="true">👀</div>
-      <h1 id="title">চোখকে ভালোবাসুন</h1>
+      <h1 id="title" data-i18n="title"></h1>
 
       <!-- ১) প্রশ্ন: রেস্ট নেবেন, নাকি Skip -->
       <div id="view-ask">
         <p class="msg" id="msg"></p>
         <div class="actions">
-          <button type="button" class="primary" id="btn-rest">✅ রেস্ট নিলাম (20s)</button>
-          <button type="button" class="ghost" id="btn-skip">⏭️ Skip</button>
+          <button type="button" class="primary" id="btn-rest" data-i18n="rest"></button>
+          <button type="button" class="ghost" id="btn-skip" data-i18n="skip"></button>
         </div>
       </div>
 
@@ -31,17 +34,20 @@
           </svg>
           <span class="num" id="count-num">২০</span>
         </div>
-        <p class="msg">২০ ফিট দূরের কিছুর দিকে তাকিয়ে থাকুন, আর মাঝে মাঝে পলক ফেলুন।</p>
-        <button type="button" class="stop" id="btn-stop">আগেই শেষ করুন</button>
+        <p class="msg" data-i18n="count_msg"></p>
+        <button type="button" class="stop" id="btn-stop" data-i18n="stop"></button>
       </div>
 
       <!-- ৩) ধন্যবাদ -->
       <div id="view-done" hidden>
-        <p class="msg done">চোখ বিশ্রাম পেল। এবার কাজে ফিরুন 🌿</p>
+        <p class="msg done" data-i18n="done"></p>
       </div>
 
-      <!-- 🔜 ধাপ ৩: নাঈম নান্দনিকের ক্রেডিট (দিনে সর্বোচ্চ ২ বার) এখানে বসবে -->
-      <div id="credit" hidden></div>
+      <!-- ক্রেডিট: দিনে সর্বোচ্চ ২ বার, অতি ছোট ও হালকা -->
+      <footer id="credit" hidden>
+        <p id="credit-text"></p>
+        <button type="button" id="btn-follow" hidden></button>
+      </footer>
     </section>
   </main>
   <script src="common.js"></script>
